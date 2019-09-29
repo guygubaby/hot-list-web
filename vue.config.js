@@ -1,7 +1,7 @@
 const CompressionPlugin = require("compression-webpack-plugin");
 // const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
 //   .BundleAnalyzerPlugin;
-const publicPath = "/hot-list-web/";
+const publicPath = "/";
 const proxyTarget = 'http://106.54.115.166:5000/'
 
 module.exports = {
