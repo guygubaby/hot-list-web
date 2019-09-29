@@ -84,5 +84,13 @@ export default {
     .ant-list-item-meta-title,.ant-list-item-meta-description {
         text-align: left;
     }
+    .ant-list-item-meta-description {
+        width:100%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        text-overflow:ellipsis;
+    }
 }
 </style>

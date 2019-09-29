@@ -4,12 +4,15 @@ import router from './router'
 import store from './store'
 
 import api from './utils/api'
-import Antd from 'ant-design-vue'
-import 'ant-design-vue/dist/antd.css'
+import {
+  List,
+  Tabs
+} from 'ant-design-vue'
 
 Vue.config.productionTip = false
 
-Vue.use(Antd)
+Vue.use(List)
+Vue.use(Tabs)
 Vue.use(api)
 
 

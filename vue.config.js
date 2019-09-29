@@ -1,6 +1,6 @@
 const CompressionPlugin = require("compression-webpack-plugin");
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
-  .BundleAnalyzerPlugin;
+// const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+//   .BundleAnalyzerPlugin;
 const publicPath = "/";
 const proxyTarget = 'http://106.54.115.166:5000/'
 
@@ -66,7 +66,7 @@ module.exports = {
   },
   configureWebpack: {
     plugins: process.env.NODE_ENV === "production" ? [
-      new BundleAnalyzerPlugin()
+      // new BundleAnalyzerPlugin()
     ] : []
   },
   productionSourceMap: process.env.NODE_ENV !== "production" // 打包时不生成.map文件
