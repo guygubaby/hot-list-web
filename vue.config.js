@@ -1,6 +1,6 @@
 const CompressionPlugin = require("compression-webpack-plugin");
-// const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
-//   .BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+  .BundleAnalyzerPlugin;
 const publicPath = "/";
 const proxyTarget = 'http://106.54.115.166:5000/'
 
@@ -36,14 +36,17 @@ module.exports = {
       axios: "axios",
       "vue-router": "VueRouter",
       vuex: "Vuex",
-      dayjs: "dayjs",
+      // dayjs: "dayjs",
+      
     };
 
     config.externals(externals);
     const cdn = {
-      css: ["//unpkg.com/element-ui/lib/theme-chalk/index.css"],
+      css: [
+
+      ],
       js: [
-        '//unpkg.com/dayjs@1.8.14/dayjs.min.js',
+        // '//unpkg.com/dayjs@1.8.14/dayjs.min.js',
         '//unpkg.com/vue@2.6.6/dist/vue.min.js',
         '//unpkg.com/vue-router@3.0.2/dist/vue-router.min.js',
         '//unpkg.com/vuex@3.1.0/dist/vuex.min.js',
@@ -63,7 +66,7 @@ module.exports = {
   },
   configureWebpack: {
     plugins: process.env.NODE_ENV === "production" ? [
-      // new BundleAnalyzerPlugin()
+      new BundleAnalyzerPlugin()
     ] : []
   },
   productionSourceMap: process.env.NODE_ENV !== "production" // 打包时不生成.map文件
