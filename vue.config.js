@@ -1,8 +1,8 @@
 const CompressionPlugin = require("compression-webpack-plugin");
 // const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
 //   .BundleAnalyzerPlugin;
-const publicPath = "/hot-list";
-const proxyTarget = "http://localhost:5000";
+const publicPath = "/hot-list-web/";
+const proxyTarget = 'http://106.54.115.166:5000/'
 
 module.exports = {
   publicPath, // 部署环境的url,环境改变需要修改
