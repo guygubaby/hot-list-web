@@ -1,6 +1,5 @@
 import axios from 'axios'
 import qs from 'qs'
-import { Message } from 'ant-design-vue'
 import app from '../main'
 
 
