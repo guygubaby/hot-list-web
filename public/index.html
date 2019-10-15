@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>每日热榜</title>
+    <title>每日热榜 - touch fish</title>
     <style>
       .hot-list {
         background-color: #17141F;
@@ -251,6 +251,15 @@
           </div>
       </div>
     </div>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150077175-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-150077175-1');
+    </script>
       <!-- 使用CDN加速的JS文件 -->
     <% for(var js of htmlWebpackPlugin.options.cdn.js) { %>
     <link href="<%=js%>" rel="preload" as="script">

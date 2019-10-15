@@ -7,8 +7,7 @@
             <a-list
                 :loading="isLoadingList"
                 itemLayout="horizontal"
-                :dataSource="hotList"
-            >
+                :dataSource="hotList">
                 <a-list-item slot="renderItem" slot-scope="item">
                 <a-list-item-meta
                     :description="item.desc"
@@ -43,6 +42,11 @@ export default {
                 this.$msg.warning('加载失败~')
             }finally{
                 this.isLoadingList = false
+                window.scroll({
+                    left:0,
+                    top:0,
+                    behavior:'smooth'
+                })
             }
         },
         async getTypes(){
@@ -68,6 +72,7 @@ export default {
 </script>
 <style lang="scss">
 .home-wrapper {
+    margin-bottom: 3rem;
     .ant-tabs {
         position: sticky;
         top: 0;
@@ -78,7 +83,7 @@ export default {
         display: flex;
         justify-content: center;
         .ant-list {
-            width: 80vw;
+            width: 85vw;
         }
     }
     .ant-list-item-meta-title,.ant-list-item-meta-description {

@@ -84,7 +84,6 @@ class Http{
       ...header
     }
   }
-
 }
 
 export default new Http()
