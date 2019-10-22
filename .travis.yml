@@ -1,0 +1,32 @@
+language: node_js
+
+node_js:
+  - lts/*
+
+sudo: required
+
+env:
+  global:
+    - ImageName=guygubaby/hotlist-web:latest
+
+services:
+  - docker
+
+install:
+  - yarn
+
+script:
+  - yarn build
+  - docker build -t $ImageName .
+
+after_script:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push $ImageName
+
+
+notifications:
+  email:
+    recipients:
+      - 1907004005@qq.com
+    on_success: change
+    on_failure: always
